@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.post('/register', usuarioController.register);
 router.post('/login', usuarioController.login);
+router.get('/telefone/:telefone', usuarioController.findByPhone);
 
 router.use(auth);
 router.get('/list', usuarioController.list);
